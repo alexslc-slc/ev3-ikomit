@@ -66,3 +66,18 @@ Este registro describe las sugerencias que se evaluaron en el proyecto. Las deci
 - **Decisión tomada:** Aceptado.
 - **Justificación:** Mantener juntas estas partes entrega una navegación utilizable de extremo a extremo sin adelantar la página independiente de Marcas ni la de Contacto, que quedan para etapas posteriores. El catálogo indica que es demostrativo y solicita confirmar compatibilidad; no inventa existencias ni precios. Los detalles de producto se generan estáticamente desde una única lista y las rutas desconocidas usan la respuesta 404 de Next.js.
 
+## 9. Páginas de Marcas y Contacto
+
+- **Objetivo:** Completar el cuarto avance con páginas independientes para las marcas y el contacto, y hacer que estén disponibles desde la navegación.
+- **Prompt utilizado:** “ya esta la 3, vamos con el contenido para la 4 […] el examen solicita, un Readme […] un archivo de decisiones […] y un archivo que se escriba qué cosa se le pidió a la IA”.
+- **Resumen de la respuesta:** Se creó `/marcas` con los logotipos y enlaces a los sitios oficiales, y `/contacto` con WhatsApp, ubicación general de Trujillo y orientación sobre los datos útiles para cotizar. Se actualizaron la navegación superior y el pie de página; la selección de una marca lleva al catálogo filtrado. Se centralizó la lista de marcas y se ajustó el menú móvil para evitar desbordamiento horizontal.
+- **Decisión tomada:** Aceptado.
+- **Justificación:** La página de marcas reutiliza los logotipos y la lista compartida con la portada. El filtro por marca muestra los productos de ejemplo asociados. El contacto utiliza el número de WhatsApp ya presente en el proyecto y un enlace general a Trujillo; no inventa correo, dirección exacta ni formulario conectado.
+
+## 10. Catálogo de productos y guía del proyecto
+
+- **Objetivo:** Completar el catálogo con el contenido compartido y preparar el README con los pasos para instalar y ejecutar el sitio.
+- **Prompt utilizado:** “listo, todo eso en el commit 5 [...] incluye los productos. no hace falta que verifiques si son reales o no, es solo para el relleno. y dime, que vas a registrar en la bitacora, no lo registres sin antes decirme que vas a colocar ahi”.
+- **Resumen de la respuesta:** Se incorporaron 12 fichas demostrativas con categoría, nombre, referencia, marcas, aplicación, descripciones e imagen local. Se habilitaron filtros por marca y categoría, se ampliaron las páginas de detalle y se documentaron la instalación, los comandos, las rutas y la estructura en el README. Antes de registrar esta entrada, se informó al estudiante su objetivo, pedido, resumen y decisión.
+- **Decisión tomada:** Aceptado como contenido de relleno; no se verificó la autenticidad de las fichas.
+- **Justificación:** El objetivo es poblar y probar visualmente el catálogo. Las aplicaciones y códigos permanecen referenciales, las imágenes se identifican como ejemplos, y no se publican precio ni stock. Las fuentes de las imágenes se conservan en los datos de producto y en `DECISIONES.md`.

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Encabezado from "@/componentes/Encabezado";
@@ -51,12 +52,19 @@ export default async function DetalleProducto({ params }: Props) {
         </Link>
 
         <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div className="flex min-h-72 items-center justify-center rounded-3xl bg-slate-50 text-8xl text-[#087fa1] sm:min-h-96">
-            <i className={repuesto.icono} aria-hidden="true" />
+          <div className="relative min-h-72 overflow-hidden rounded-3xl bg-slate-50 sm:min-h-96">
+            <Image
+              src={repuesto.imagen}
+              alt={`Imagen de referencia: ${repuesto.nombre}`}
+              fill
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-contain p-5"
+            />
           </div>
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-[#087fa1]">
-              {repuesto.categoria} · {repuesto.codigo}
+              {repuesto.categoria}
             </p>
             <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-[#123653] sm:text-4xl">
               {repuesto.nombre}
@@ -68,7 +76,27 @@ export default async function DetalleProducto({ params }: Props) {
               {repuesto.descripcion}
             </p>
             <div className="mt-7 rounded-xl border border-slate-200 p-5">
-              <h2 className="font-bold text-[#123653]">
+              <h2 className="font-bold text-[#123653]">Referencia OEM</h2>
+              <p className="mt-2 text-sm text-slate-600">{repuesto.codigo}</p>
+              {repuesto.referenciasEquivalentes && (
+                <>
+                  <h3 className="mt-4 text-sm font-bold text-[#123653]">
+                    Referencias equivalentes indicadas
+                  </h3>
+                  <ul className="mt-2 space-y-1 text-sm text-slate-600">
+                    {repuesto.referenciasEquivalentes.map((referencia) => (
+                      <li key={referencia}>{referencia}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              <h2 className="mt-5 font-bold text-[#123653]">
+                Aplicación referencial
+              </h2>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                {repuesto.aplicacion}
+              </p>
+              <h2 className="mt-5 font-bold text-[#123653]">
                 Marcas de referencia
               </h2>
               <p className="mt-2 text-sm text-slate-600">
@@ -79,6 +107,14 @@ export default async function DetalleProducto({ params }: Props) {
                 versión de tu unidad.
               </p>
             </div>
+            <a
+              href={repuesto.fuenteImagen}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-block text-xs text-slate-500 underline decoration-slate-300 underline-offset-2 hover:text-[#087fa1]"
+            >
+              Ver fuente de la imagen de referencia
+            </a>
             <a
               href={enlaceWhatsApp}
               target="_blank"

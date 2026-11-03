@@ -17,6 +17,9 @@
 | Lista de marcas compartida por la portada y la página Marcas | Mantener dos listas de logotipos independientes | Una sola fuente de datos mantiene uniformes los nombres, imágenes y enlaces oficiales. Desde la página se puede consultar el catálogo filtrado por marca. |
 | Página de Contacto con WhatsApp y ubicación general | Añadir un formulario sin servicio que lo procese o publicar datos no confirmados | WhatsApp ya es el canal de consulta utilizado en el sitio. Se indica Trujillo, La Libertad sin inventar una dirección exacta, correo u horario. |
 | Enlace y teléfono de WhatsApp centralizados en un módulo de datos | Repetir el número y construir el enlace por separado en cada página | Una función compartida codifica el mensaje de consulta y mantiene uniforme el número usado por la navegación, el catálogo y Contacto. |
+| Fichas e imágenes demostrativas para poblar el catálogo | Mostrar precios o existencias no proporcionados | Se incorporan los 12 ejemplos compartidos para probar tarjetas, filtros por marca y categoría, y páginas de detalle. Aplicaciones y códigos son referenciales, las imágenes son de referencia, y no se afirma que haya inventario confirmado. |
+| Fotografías guardadas en `public/productos/` y fuentes enlazadas desde cada detalle | Solicitar imágenes a los servidores originales en cada visita | Los archivos locales permiten que las páginas del catálogo no dependan del tiempo de respuesta de los sitios externos. Cada detalle conserva el enlace de origen de su imagen de referencia. |
+| README en español con instalación, comandos, rutas y estructura | Conservar el README genérico de Next.js | La guía describe cómo ejecutar este proyecto y dónde modificar las rutas, componentes y datos del catálogo. |
 
 ## Fuentes de los logotipos
 
@@ -28,3 +31,23 @@
 | Hino | `public/marcas/hino.webp` | [Car Brand Names: Hino](https://carbrandnames.com/es/marcas/hino/) |
 | Isuzu | `public/marcas/isuzu.svg` | [Wikimedia Commons: Isuzu wordmark](https://commons.wikimedia.org/wiki/File:Isuzu_wordmark.svg) |
 | Nissan | `public/marcas/nissan.svg` | [Wikimedia Commons: Nissan Motor Corporation 2020 logo](https://commons.wikimedia.org/wiki/File:Nissan_Motor_Corporation_2020_logo.svg) |
+
+## Imágenes de referencia del catálogo
+
+Los enlaces siguientes corresponden a las imágenes compartidas para el
+contenido demostrativo. Las fichas enlazan a la fuente desde su detalle.
+
+| Producto | Archivo local | Fuente compartida |
+|---|---|---|
+| Filtro de aceite Hyundai | `public/productos/filtro-aceite-hyundai.webp` | [Imagen de referencia](https://image.made-in-china.com/202f0j00jNfcGQmWEUkw/Reasonable-Prices-Auto-Engine-Oil-Filter-26300-35503-26300-35500-26300-35501-26300-35504-for-Engine-Protected-Hyundai-KIA.webp) |
+| Filtro de aceite Hino | `public/productos/filtro-aceite-hino.jpg` | [Imagen de referencia](https://www.hhgautoparts.com/data/prod/1694936320_156072210l3.jpg) |
+| Filtro de aire Hino | `public/productos/filtro-aire-hino.jpg` | [Imagen de referencia](https://pt.filters-king.com/uploadfile/202301/29/e299e333f63114d593a274b5ab04d8db.JPG) |
+| Filtro de aceite Nissan / Mitsubishi | `public/productos/filtro-aceite-nissan-mitsubishi.jpg` | [Imagen de referencia](https://down-my.img.susercontent.com/file/my-11134207-23020-102cufydy6mv59) |
+| Disco de embrague Hino | `public/productos/disco-embrague-hino.webp` | [Imagen de referencia](https://cbtautoparts.com/cdn/shop/files/He774c335356d4a60b75ad84d8f04d62eA.webp?v=1757427727&width=1080) |
+| Disco de embrague Isuzu | `public/productos/disco-embrague-isuzu.jpg` | [Imagen de referencia](https://www.japanesetruckspareparts.com/photo/pl133676289-factory_direct_sale_transmission_clutch_disc_japanese_truck_clutch_parts_for_isuzu_4jj1_nlr85_8980370042_8_98037004_2.jpg) |
+| Rodamiento de desembrague | `public/productos/rodamiento-embrague-multimarca.jpg` | [Imagen representativa](https://images.2407.pl/media/images/products/2022/08/2022-27-08_23-02-32_13790853.jpg) |
+| Zapatas de freno Hino | `public/productos/zapatas-freno-hino.jpg` | [Imagen de referencia](https://image.made-in-china.com/202f0j00vRkMwWhrHUcT/High-Quality-Hino-Brake-Shoe-Rear-47431-1240.jpg) |
+| Pastillas de freno Hyundai / Kia | `public/productos/pastillas-freno-hyundai-kia.webp` | [Imagen de referencia](https://image.made-in-china.com/203f0j00irFePfataBqo/Wholesale-Price-Car-Accessory-Auto-Parts-OEM-ODM-58302-17A00-Ceramic-Disc-Front-Brake-Pads-for-Hyundai-Toyota-BMW-Chery-Geely-Byd-KIA.webp) |
+| Amplificador de freno | `public/productos/amplificador-freno-nissan.jpg` | [Imagen de referencia](https://www.japanesetruckspareparts.com/photo/pl30853118-nissan_ud_mc828264_truck_air_brake_system_parts.jpg) |
+| Filtro de aceite Isuzu | `public/productos/filtro-aceite-isuzu.jpg` | [Imagen de referencia](https://www.niparts.com/Graphics/full/DATA_46/823061.jpg) |
+| Filtro de combustible Mitsubishi | `public/productos/filtro-combustible-mitsubishi.jpg` | [Imagen de referencia](https://cdn.autodoc.de/thumb?id=16885732&lng=fr&m=0&n=0&rev=94077991) |
