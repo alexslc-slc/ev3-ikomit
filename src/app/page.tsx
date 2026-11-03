@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Encabezado from "@/componentes/Encabezado";
 import PiePagina from "@/componentes/PiePagina";
+import { crearEnlaceWhatsApp } from "@/datos/contacto";
+import { marcas } from "@/datos/marcas";
 
 const categorias = [
   {
@@ -23,39 +25,6 @@ const categorias = [
     nombre: "Frenos",
     detalle: "Pastillas, zapatas y componentes.",
     icono: "fa-solid fa-shield-halved",
-  },
-];
-
-const marcas = [
-  {
-    nombre: "Hyundai",
-    imagen: "/marcas/hyundai.svg",
-    enlace: "https://www.hyundai.com/worldwide/en",
-  },
-  {
-    nombre: "Kia",
-    imagen: "/marcas/kia.png",
-    enlace: "https://worldwide.kia.com/int",
-  },
-  {
-    nombre: "Mitsubishi Motors",
-    imagen: "/marcas/mitsubishi.png",
-    enlace: "https://www.mitsubishi-motors.com/en/",
-  },
-  {
-    nombre: "Hino",
-    imagen: "/marcas/hino.webp",
-    enlace: "https://www.hino-global.com/",
-  },
-  {
-    nombre: "Isuzu",
-    imagen: "/marcas/isuzu.svg",
-    enlace: "https://www.isuzu.co.jp/world/",
-  },
-  {
-    nombre: "Nissan",
-    imagen: "/marcas/nissan.svg",
-    enlace: "https://www.nissan-global.com/EN/",
   },
 ];
 
@@ -119,7 +88,9 @@ export default function Inicio() {
                 <i className="fa-solid fa-arrow-right" aria-hidden="true" />
               </Link>
               <a
-                href="https://wa.me/51985068416?text=Hola%2C%20quiero%20consultar%20por%20un%20repuesto."
+                href={crearEnlaceWhatsApp(
+                  "Hola, quiero consultar por un repuesto.",
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/50 px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-white/10"
@@ -326,7 +297,7 @@ export default function Inicio() {
             </p>
           </div>
           <a
-            href="https://wa.me/51985068416?text=Hola%2C%20quiero%20cotizar%20un%20repuesto."
+            href={crearEnlaceWhatsApp("Hola, quiero cotizar un repuesto.")}
             target="_blank"
             rel="noreferrer"
             className="inline-flex shrink-0 items-center gap-3 rounded-full bg-cyan-500 px-6 py-3.5 font-bold text-white transition-colors hover:bg-cyan-400"

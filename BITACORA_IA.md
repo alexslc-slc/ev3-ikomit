@@ -65,3 +65,4 @@ Este registro describe las sugerencias que se evaluaron en el proyecto. Las deci
 - **Resumen de la respuesta:** Se consolidaron esos avances en el commit 3. Se añadieron las rutas `/nosotros`, `/servicios`, `/productos` y `/productos/[producto]`, se reutilizaron el encabezado y el pie de página, y se agregó un catálogo estático de ejemplo con enlaces de consulta por WhatsApp.
 - **Decisión tomada:** Aceptado.
 - **Justificación:** Mantener juntas estas partes entrega una navegación utilizable de extremo a extremo sin adelantar la página independiente de Marcas ni la de Contacto, que quedan para etapas posteriores. El catálogo indica que es demostrativo y solicita confirmar compatibilidad; no inventa existencias ni precios. Los detalles de producto se generan estáticamente desde una única lista y las rutas desconocidas usan la respuesta 404 de Next.js.
+

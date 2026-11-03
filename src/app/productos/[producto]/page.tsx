@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Encabezado from "@/componentes/Encabezado";
 import PiePagina from "@/componentes/PiePagina";
+import { crearEnlaceWhatsApp } from "@/datos/contacto";
 import { buscarRepuesto, repuestos } from "@/datos/repuestos";
 
 type Props = PageProps<"/productos/[producto]">;
@@ -33,9 +34,9 @@ export default async function DetalleProducto({ params }: Props) {
     notFound();
   }
 
-  const enlaceWhatsApp = `https://wa.me/51985068416?text=${encodeURIComponent(
+  const enlaceWhatsApp = crearEnlaceWhatsApp(
     `Hola, quisiera consultar por ${repuesto.nombre} (${repuesto.codigo}).`,
-  )}`;
+  );
 
   return (
     <main className="min-h-screen bg-white text-slate-900">

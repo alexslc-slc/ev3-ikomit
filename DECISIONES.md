@@ -14,6 +14,9 @@
 | Encabezado y pie de página compartidos entre las rutas | Copiar el mismo bloque de navegación y marca en cada página | Los componentes reutilizables mantienen una navegación consistente y evitan que los cambios de marca tengan que repetirse en cada archivo. |
 | Catálogo local de productos de ejemplo, con rutas dinámicas | Presentar precios y existencias sin una fuente de inventario conectada | Los datos se mantienen en una lista TypeScript para generar el catálogo y sus detalles. La interfaz aclara que son ejemplos, invita a confirmar compatibilidad y enlaza las consultas a WhatsApp. |
 | Páginas de servidor para Nosotros, Servicios y Productos | Añadir lógica de cliente sin necesidad de interacción dinámica | El contenido es informativo y estático; App Router permite prerenderizarlo y mantener una implementación sencilla. |
+| Lista de marcas compartida por la portada y la página Marcas | Mantener dos listas de logotipos independientes | Una sola fuente de datos mantiene uniformes los nombres, imágenes y enlaces oficiales. Desde la página se puede consultar el catálogo filtrado por marca. |
+| Página de Contacto con WhatsApp y ubicación general | Añadir un formulario sin servicio que lo procese o publicar datos no confirmados | WhatsApp ya es el canal de consulta utilizado en el sitio. Se indica Trujillo, La Libertad sin inventar una dirección exacta, correo u horario. |
+| Enlace y teléfono de WhatsApp centralizados en un módulo de datos | Repetir el número y construir el enlace por separado en cada página | Una función compartida codifica el mensaje de consulta y mantiene uniforme el número usado por la navegación, el catálogo y Contacto. |
 
 ## Fuentes de los logotipos
 

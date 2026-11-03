@@ -1,11 +1,13 @@
 import Link from "next/link";
+import { crearEnlaceWhatsApp } from "@/datos/contacto";
 
 const enlaces = [
   { nombre: "Inicio", destino: "/" },
   { nombre: "Nosotros", destino: "/nosotros" },
   { nombre: "Servicios", destino: "/servicios" },
   { nombre: "Productos", destino: "/productos" },
-  { nombre: "Marcas", destino: "/#marcas" },
+  { nombre: "Marcas", destino: "/marcas" },
+  { nombre: "Contacto", destino: "/contacto" },
 ];
 
 function Navegacion({ movil = false }: { movil?: boolean }) {
@@ -14,8 +16,8 @@ function Navegacion({ movil = false }: { movil?: boolean }) {
       aria-label={movil ? "Navegación móvil" : "Navegación principal"}
       className={
         movil
-          ? "flex gap-6 overflow-x-auto px-5 pb-3 text-sm font-semibold text-slate-600 lg:hidden"
-          : "hidden items-center gap-7 text-sm font-semibold text-slate-600 lg:flex"
+          ? "navegacion-movil flex gap-6 px-5 pb-3 text-sm font-semibold text-slate-600"
+          : "navegacion-principal items-center gap-7 text-sm font-semibold text-slate-600"
       }
     >
       {enlaces.map((enlace) => (
@@ -74,7 +76,7 @@ export default function Encabezado() {
           <Navegacion />
 
           <a
-            href="https://wa.me/51985068416?text=Hola%2C%20quiero%20cotizar%20un%20repuesto."
+            href={crearEnlaceWhatsApp("Hola, quiero cotizar un repuesto.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#087fa1] px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#076783] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087fa1] sm:px-5"

@@ -24,6 +24,28 @@ body {
   box-sizing: border-box;
 }
 
+.navegacion-principal {
+  display: none;
+}
+
+.navegacion-movil {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+@media (min-width: 1024px) {
+  .navegacion-principal {
+    display: flex;
+  }
+
+  .navegacion-movil {
+    display: none;
+  }
+}
+
 .zen-dots-regular {
   font-family: "Zen Dots", sans-serif;
   font-weight: 400;

@@ -27,7 +27,7 @@ export const repuestos: Repuesto[] = [
     categoria: "Filtros",
     codigo: "IK-FIL-002",
     icono: "fa-solid fa-filter",
-    marcas: ["Mitsubishi", "Hino", "Isuzu"],
+    marcas: ["Mitsubishi Motors", "Hino", "Isuzu"],
     resumen: "Una pieza de mantenimiento que debe elegirse según cada motor.",
     descripcion:
       "Indícanos los datos de tu vehículo para confirmar el filtro adecuado. Las referencias de esta página son ejemplos de catálogo.",
@@ -38,7 +38,7 @@ export const repuestos: Repuesto[] = [
     categoria: "Embrague",
     codigo: "IK-EMB-003",
     icono: "fa-solid fa-compact-disc",
-    marcas: ["Hyundai", "Mitsubishi", "Nissan"],
+    marcas: ["Hyundai", "Mitsubishi Motors", "Nissan"],
     resumen: "Repuesto del sistema de transmisión para camiones y buses.",
     descripcion:
       "La medida y aplicación pueden variar según la versión de la unidad. Escríbenos para revisar la referencia antes de cotizar.",
