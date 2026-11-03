@@ -34,3 +34,32 @@ body {
   color: #fff;
   background: #087fa1;
 }
+
+.ventana-marcas {
+  overflow: hidden;
+}
+
+.movimiento-marcas {
+  animation: desplazar-marcas 32s linear infinite;
+}
+
+.ventana-marcas:hover .movimiento-marcas,
+.ventana-marcas:focus-within .movimiento-marcas {
+  animation-play-state: paused;
+}
+
+@keyframes desplazar-marcas {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ventana-marcas {
+    overflow-x: auto;
+  }
+
+  .movimiento-marcas {
+    animation: none;
+  }
+}

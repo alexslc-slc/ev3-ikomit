@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Encabezado from "@/componentes/Encabezado";
+import PiePagina from "@/componentes/PiePagina";
 
 const categorias = [
   {
@@ -24,7 +26,38 @@ const categorias = [
   },
 ];
 
-const marcas = ["HYUNDAI", "KIA", "MITSUBISHI", "HINO", "ISUZU", "NISSAN"];
+const marcas = [
+  {
+    nombre: "Hyundai",
+    imagen: "/marcas/hyundai.svg",
+    enlace: "https://www.hyundai.com/worldwide/en",
+  },
+  {
+    nombre: "Kia",
+    imagen: "/marcas/kia.png",
+    enlace: "https://worldwide.kia.com/int",
+  },
+  {
+    nombre: "Mitsubishi Motors",
+    imagen: "/marcas/mitsubishi.png",
+    enlace: "https://www.mitsubishi-motors.com/en/",
+  },
+  {
+    nombre: "Hino",
+    imagen: "/marcas/hino.webp",
+    enlace: "https://www.hino-global.com/",
+  },
+  {
+    nombre: "Isuzu",
+    imagen: "/marcas/isuzu.svg",
+    enlace: "https://www.isuzu.co.jp/world/",
+  },
+  {
+    nombre: "Nissan",
+    imagen: "/marcas/nissan.svg",
+    enlace: "https://www.nissan-global.com/EN/",
+  },
+];
 
 const razones = [
   {
@@ -47,76 +80,7 @@ const razones = [
 export default function Inicio() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <div className="bg-[#102c46] px-5 py-2 text-center text-xs font-medium text-white sm:text-sm">
-        <span className="mr-2 text-cyan-300">
-          <i className="fa-solid fa-truck-fast" aria-hidden="true" />
-        </span>
-        Repuestos para camiones y buses. Atención y envíos a nivel nacional.
-      </div>
-
-      <header className="border-b border-slate-100 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 lg:px-8">
-          <Link
-            href="/"
-            className="shrink-0"
-            aria-label="IKOMI Perú, inicio"
-          >
-            <span className="flex items-center gap-2">
-              <span className="flex min-w-0 flex-col leading-none">
-                <span className="flex items-baseline gap-1">
-                  <span className="text-xl font-black tracking-[0.05em] text-[#123653] sm:text-2xl">
-                    IKOMI
-                  </span>
-                  <span className="text-[9px] font-extrabold tracking-[0.16em] text-[#087fa1] sm:text-[10px]">
-                    PERÚ
-                  </span>
-                </span>
-                <span className="mt-0 bg-[#e64651] px-1.5 py-1 text-[7px] font-bold uppercase tracking-[0.08em] text-white sm:text-[8px]">
-                  Repuestos de Corea y Japón
-                </span>
-              </span>
-              <span
-                aria-hidden="true"
-                className="zen-dots-regular flex h-11 w-[58px] shrink-0 items-center justify-center border-y-4 border-[#e64651] bg-[#123653] text-[18px] text-white"
-              >
-                IKM
-              </span>
-            </span>
-          </Link>
-
-          <nav
-            aria-label="Navegación principal"
-            className="hidden items-center gap-7 text-sm font-semibold text-slate-600 lg:flex"
-          >
-            <Link href="/" className="text-[#087fa1]">
-              Inicio
-            </Link>
-            <Link href="/nosotros" className="transition-colors hover:text-[#087fa1]">
-              Nosotros
-            </Link>
-            <Link href="/servicios" className="transition-colors hover:text-[#087fa1]">
-              Servicios
-            </Link>
-            <Link href="/productos" className="transition-colors hover:text-[#087fa1]">
-              Productos
-            </Link>
-            <Link href="/marcas" className="transition-colors hover:text-[#087fa1]">
-              Marcas
-            </Link>
-          </nav>
-
-          <a
-            href="https://wa.me/51985068416?text=Hola%2C%20quiero%20cotizar%20un%20repuesto."
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#087fa1] px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#076783] sm:px-5"
-          >
-            <i className="fa-brands fa-whatsapp text-lg" aria-hidden="true" />
-            <span className="hidden sm:inline">Solicitar cotización</span>
-            <span className="sm:hidden">Cotizar</span>
-          </a>
-        </div>
-      </header>
+      <Encabezado />
 
       <section className="relative isolate overflow-hidden bg-[#102c46]">
         <div className="absolute inset-0 -z-10">
@@ -154,13 +118,15 @@ export default function Inicio() {
                 Explorar productos
                 <i className="fa-solid fa-arrow-right" aria-hidden="true" />
               </Link>
-              <Link
-                href="/contacto"
+              <a
+                href="https://wa.me/51985068416?text=Hola%2C%20quiero%20consultar%20por%20un%20repuesto."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-white/50 px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-white/10"
               >
                 <i className="fa-regular fa-comment-dots" aria-hidden="true" />
                 Hablemos
-              </Link>
+              </a>
             </div>
             <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/20 pt-6 text-sm text-slate-200">
               <span>
@@ -238,20 +204,71 @@ export default function Inicio() {
         </div>
       </section>
 
-      <section id="marcas" className="border-y border-slate-100 bg-slate-50">
+      <section
+        id="marcas"
+        aria-labelledby="titulo-marcas"
+        className="border-y border-slate-100 bg-slate-50"
+      >
         <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8">
-          <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
+          <h2
+            id="titulo-marcas"
+            className="text-center text-xs font-bold uppercase tracking-[0.18em] text-slate-500"
+          >
             Repuestos para las marcas que mueven el transporte
-          </p>
-          <div className="mt-8 grid grid-cols-2 items-center gap-6 text-center sm:grid-cols-3 lg:grid-cols-6">
-            {marcas.map((marca) => (
-              <span
-                key={marca}
-                className="text-sm font-extrabold tracking-wider text-slate-400 transition-colors hover:text-[#123653]"
+          </h2>
+          <div
+            role="region"
+            aria-label="Logotipos de marcas"
+            tabIndex={0}
+            className="ventana-marcas mt-8"
+          >
+            <div className="movimiento-marcas flex w-max">
+              <ul className="flex shrink-0 items-center gap-8 pr-8 sm:gap-12 sm:pr-12">
+                {marcas.map((marca) => (
+                  <li
+                    key={marca.nombre}
+                    className="flex h-16 w-36 shrink-0 items-center justify-center"
+                  >
+                    <a
+                      href={marca.enlace}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visitar el sitio oficial de ${marca.nombre}`}
+                      className="flex h-full w-full items-center justify-center rounded-lg transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#087fa1]"
+                    >
+                      <Image
+                        src={marca.imagen}
+                        alt={marca.nombre}
+                        width={144}
+                        height={64}
+                        sizes="144px"
+                        className="h-14 w-32 object-contain"
+                      />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <ul
+                aria-hidden="true"
+                className="flex shrink-0 items-center gap-8 pr-8 sm:gap-12 sm:pr-12"
               >
-                {marca}
-              </span>
-            ))}
+                {marcas.map((marca) => (
+                  <li
+                    key={marca.nombre}
+                    className="flex h-16 w-36 shrink-0 items-center justify-center"
+                  >
+                    <Image
+                      src={marca.imagen}
+                      alt=""
+                      width={144}
+                      height={64}
+                      sizes="144px"
+                      className="h-14 w-32 object-contain"
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -320,20 +337,7 @@ export default function Inicio() {
         </div>
       </section>
 
-      <footer className="bg-[#0b2035] px-5 py-8 text-sm text-slate-300">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 sm:flex-row sm:items-center">
-          <div className="flex flex-col leading-none">
-            <p className="font-extrabold tracking-[0.06em] text-white">
-              IKOMI <span className="text-cyan-400">PERÚ</span>
-            </p>
-            <p className="mt-1 border-t border-[#e64651] pt-1 text-[8px] font-bold uppercase tracking-[0.12em] text-slate-400">
-              Repuestos de Corea y Japón
-            </p>
-          </div>
-          <p>Repuestos para camiones y buses. Trujillo, La Libertad, Perú.</p>
-          <p className="text-slate-400">© 2026 IKOMI Perú</p>
-        </div>
-      </footer>
+      <PiePagina />
     </main>
   );
 }

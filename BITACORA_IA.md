@@ -49,3 +49,19 @@ Este registro describe las sugerencias que se evaluaron en el proyecto. Las deci
 - **Resumen de la respuesta:** Se redujo el espacio vertical entre el nombre y la frase del logo hasta quitar su margen superior, y se cargó Zen Dots desde Google Fonts para el bloque “IKM”.
 - **Decisión tomada:** Aceptado.
 - **Justificación:** El ajuste conserva la composición acordada y aplica la fuente solicitada únicamente al distintivo, sin cambiar la tipografía del resto de la página.
+
+## 7. Logotipos y carrusel de marcas
+
+- **Objetivo:** Reemplazar los nombres de Hyundai, Kia, Mitsubishi, Hino, Isuzu y Nissan por sus logotipos, enlazarlos con sus sitios oficiales y mostrarlos en un bucle horizontal.
+- **Prompt utilizado:** “bien, procedemos con el contenido para el 3er commit, [aqui incluimos las imagenes de las marcas. tambien indicame que vas a colcar en la 'bitacora']”.
+- **Resumen de la respuesta:** Se guardaron los seis logotipos en `public/marcas`, se enlazó cada uno al sitio oficial de su fabricante y se creó un carrusel CSS continuo. La segunda serie de imágenes es decorativa para lectores de pantalla; el movimiento se pausa al pasar el cursor o enfocar la sección y se desactiva si el sistema solicita reducir movimiento.
+- **Decisión tomada:** Aceptado, con una sustitución para Nissan.
+- **Justificación:** Los archivos locales evitan depender de un servidor externo para mostrar los logotipos. La animación CSS no requiere JavaScript ni dependencias adicionales. La imagen de Nissan propuesta reunía también las marcas Infiniti y Datsun, por lo que se eligió un logotipo independiente de Nissan. Las fuentes y enlaces de las imágenes se documentan en `DECISIONES.md`.
+
+## 8. Páginas informativas y catálogo de productos
+
+- **Objetivo:** Incluir en el tercer avance las páginas Nosotros, Servicios y Productos, junto con un detalle dinámico para cada producto de ejemplo.
+- **Prompt utilizado:** “hagamos que la 3, 4 y 5 sean uno solo. haz los dos restante, esos 3, seran el comit 3”.
+- **Resumen de la respuesta:** Se consolidaron esos avances en el commit 3. Se añadieron las rutas `/nosotros`, `/servicios`, `/productos` y `/productos/[producto]`, se reutilizaron el encabezado y el pie de página, y se agregó un catálogo estático de ejemplo con enlaces de consulta por WhatsApp.
+- **Decisión tomada:** Aceptado.
+- **Justificación:** Mantener juntas estas partes entrega una navegación utilizable de extremo a extremo sin adelantar la página independiente de Marcas ni la de Contacto, que quedan para etapas posteriores. El catálogo indica que es demostrativo y solicita confirmar compatibilidad; no inventa existencias ni precios. Los detalles de producto se generan estáticamente desde una única lista y las rutas desconocidas usan la respuesta 404 de Next.js.
